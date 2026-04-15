@@ -1,0 +1,13 @@
+@media (max-width: 576px) {
+  .card {
+    padding: 20px 15px;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+}

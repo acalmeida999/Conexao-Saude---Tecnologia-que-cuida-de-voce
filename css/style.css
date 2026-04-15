@@ -1,0 +1,250 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ================= BASE ================= */
+body {
+    display: flex;
+    font-family: sans-serif;
+}
+
+/* ================= MENU LATERAL (PC) ================= */
+header {
+    width: 200px;
+   background: linear-gradient(135deg, #7DBFFC, #e3eefa, #7DBFFC);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+
+
+.foto_usuario {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+}
+
+.nome_usuario {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.menu_header a {
+    font-size: 15px;
+    color: black;
+    transition: 0.3s;
+}
+
+.menu_header a:hover {
+    transform: scale(1.1);
+    color: #337dff;
+}
+
+/* ================= CONTEÚDO ================= */
+.conteudo {
+    flex: 1;
+    padding: 20px;
+}
+
+/* ================= TOPO DESKTOP ================= */
+.topo_desktop {
+    min-height: 70px;
+    background: linear-gradient(135deg, #7DBFFC, #e3eefa, #7DBFFC);
+    padding: 15px 30px;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* PESQUISA DESKTOP */
+.fx_pesquisa {
+    width: 320px;
+    position: relative;
+}
+
+.fx_pesquisa input {
+    width: 100%;
+    height: 42px;
+    font-size: 16px;
+    border-radius: 20px;
+    padding-left: 40px;
+    border: 1px solid #ccc;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+
+/* ================= MOBILE (ESCONDIDO NO PC) ================= */
+.topo_mobile,
+.menu_mobile,
+.foto_mobile {
+    display: none;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 1199px) {
+
+    /* REMOVE MENU LATERAL */
+    header {
+        display: none !important;
+        position: absolute !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+    }
+
+
+    body {
+        display: block;
+    }
+
+    .conteudo {
+        padding: 15px;
+    }
+
+    /* ESCONDE DESKTOP */
+    .topo_desktop {
+        display: none !important;
+    }
+
+    /* ================= TOPO MOBILE ================= */
+
+    .topo_mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 15px;
+    }
+
+    /* CARD AZUL (foto + nome + sino) */
+    .topo_linha1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        background: linear-gradient(135deg, #EBF3FC, #CEE4FC);
+        padding: 15px;
+        border-radius: 20px;
+    }
+
+    .bloco_usuario {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .foto_mobile {
+        display: block;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        border: 3px solid #337dff;
+        object-fit: cover;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* NOME + OLÁ NA MESMA LINHA */
+    .info_usuario {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .nome_usuario_mobile {
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    .ola_usuario {
+        color: #337dff;
+        font-size: 14px;
+    }
+
+    /* SINO */
+    .icone_notificacao {
+        font-size: 22px;
+        position: relative;
+    }
+
+    /* bolinha vermelha */
+    .icone_notificacao::after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        width: 8px;
+        height: 8px;
+        background: red;
+        border-radius: 50%;
+    }
+
+    /* ================= PESQUISA MOBILE ================= */
+
+    .topo_linha2 {
+        background: linear-gradient(135deg, #EBF3FC, #CEE4FC);
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .topo_linha2 .fx_pesquisa {
+        width: 100%;
+    }
+
+    .topo_linha2 input {
+        width: 100%;
+        height: 40px;
+        border-radius: 25px;
+        padding-left: 40px;
+    }
+
+    /* ================= MENU MOBILE ================= */
+
+    .menu_mobile {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: linear-gradient(135deg, #EBF3FC, #CEE4FC, #7DBFFC);
+        z-index: 999;
+    }
+
+    .menu_mobile a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 11px;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .menu_mobile i {
+        font-size: 20px;
+        margin-bottom: 3px;
+    }
+
+    .menu_mobile a.ativo {
+        color: #337dff;
+    }
+
+    /* espaço pra não cobrir conteúdo */
+    .conteudo {
+        padding-bottom: 90px;
+    }
+}

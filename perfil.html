@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conexão Saúde - Perfil</title>
+    <link rel="shortcut icon" href="./img/favicon.jpg" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/perfil.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- MENU LATERAL -->
+    <header class="d-flex flex-column align-items-center m-3 rounded-5 pb-3">
+
+
+        <div class="d-flex flex-column align-items-center mb-4 mt-5">
+
+            <img class="foto_usuario rounded-circle" src="./img/icone_usuario2.png">
+
+            <span class="nome_usuario">Ana Carolina</span>
+
+        </div>
+
+        <nav class="nav_header mt-4">
+
+            <ul class="menu_header d-flex flex-column gap-4 list-unstyled">
+
+                <li>
+                    <a href="home.html" class="text-decoration-none text-dark">
+                        <i class="fa-solid fa-house me-2"></i> Início
+                    </a>
+                </li>
+
+                <li>
+                    <a href="perfil.html" class="text-decoration-none text-dark">
+                        <i class="fa-solid fa-user me-2"></i> Perfil
+                    </a>
+                </li>
+
+                <li>
+                    <a href="remedio.html" class="text-decoration-none text-dark">
+                        <i class="fa-solid fa-pills me-2"></i> Remédios
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dicas_de_saude.html" class="text-decoration-none text-dark">
+                        <i class="fa-solid fa-hand-holding-heart me-2"></i> Dicas de Saúde
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pontosColeta.html" class="text-decoration-none text-dark">
+                        <i class="fa-solid fa-map-location-dot me-2"></i> Pontos de Coleta
+                    </a>
+                </li>
+
+                <li>
+                    <a href="configuracao.html" class="text-decoration-none text-dark">
+                        <i class="fa-solid fa-gear me-2"></i> Configuração
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html" class="text-decoration-none text-dark">
+                        <i class="fa-solid fa-right-from-bracket me-2"></i> Sair
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="conteudo flex-grow-1 p-3">
+
+        <div class="perfil d-flex  mt-2 rounded-5 p-4">
+
+            <!-- INCLUIR FOTO -->
+            <div class="foto  ">
+
+                <!-- BOTÃO ESCOLHER FOTO -->
+                <label class="mx-5" style="cursor: pointer;">
+                    <img class="foto_usuario" src="./img/icone_usuario2.png">
+                    <input type="file" id="input_foto" accept="image/*" hidden>
+                </label>
+            </div>
+
+            <div class="info_usuario ">
+                <h4 class="nome">Ana Carolina</h4>
+                <p class="idade"><i class="fa-solid fa-cake-candles"></i> 33 anos</p>
+                <p class="cidade"><i class="fa-solid fa-location-dot"></i> São josé dos Campos</p>
+
+                <button class="editar_perfil btn rounded-5">
+                    <i class="fa-solid fa-pen me-2"></i>
+                    Editar Perfil
+                </button>
+            </div>
+        </div>
+
+
+        <!-- NAV TABS -->
+        <ul class="nav nav-tabs d-flex mt-4 justify-content-center gap-4" id="meuTab" role="tablist">
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="inf_usuario-tab" data-bs-toggle="tab" data-bs-target="#inf_usuario"
+                    type="button">
+                    <i class="fa-solid fa-address-card"></i> Informaçoes de Usuario
+                </button>
+
+            </li>
+
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="inf_medicas-tab" data-bs-toggle="tab" data-bs-target="#inf_medicas"
+                    type="button">
+                    <i class="fa-solid fa-heart-pulse"></i> Informaçoes Medicas
+                </button>
+            </li>
+
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="historico_saude-tab" data-bs-toggle="tab" data-bs-target="#historico_saude"
+                    type="button">
+                    <i class="fa-solid fa-folder-plus"></i> Historico de Saúde
+                </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="calendario-tab" data-bs-toggle="tab" data-bs-target="#calendario"
+                    type="button">
+                    <i class="fa-solid fa-calendar-days"></i> Calendario
+                </button>
+            </li>
+        </ul>
+
+        <!-- CONTEÚDO DAS TABS -->
+        <div class="tab-content" id="meuTabContent">
+
+            <div class="tab-pane fade show active mt-4" id="inf_usuario">
+
+                <h4 class="mb-4 fw-bold">
+                    <i class="fa-solid fa-user"></i> Dados do Usuário
+                </h4>
+
+                <!-- GRID -->
+                <div class="row g-3">
+
+                    <div class="col-md-6">
+                        <div class="info-box">
+                            <small>Nome</small>
+                            <p>Ana Carolina</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="info-box">
+                            <small>Telefone</small>
+                            <p>(12) 99999-9999</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="info-box">
+                            <small>Data de nascimento</small>
+                            <p>10/12/1992</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="info-box">
+                            <small>Genero</small>
+                            <p>Feminino</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <!-- ENDEREÇO -->
+                <h5 class="text-primary mb-3">
+                    <i class="fa-solid fa-house"></i> Endereço
+                </h5>
+
+                <div class="row g-3">
+
+                    <div class="col-md-8">
+                        <div class="info-box">
+                            <small>Rua</small>
+                            <p>Rua Lineu de Moura</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="info-box">
+                            <small>Número</small>
+                            <p>205</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="info-box">
+                            <small>Cidade</small>
+                            <p>São José dos Campos </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="info-box">
+                            <small>Estado</small>
+                            <p>SP</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <!-- EMERGÊNCIA -->
+                <h5 class="text-danger mb-3">
+                    <i class="fa-solid fa-phone-volume"></i> Contato de Emergência
+                </h5>
+
+                <div class="row g-3">
+
+                    <div class="col-md-4">
+                        <div class="info-box">
+                            <small>Nome</small>
+                            <p>Luciana Almeida</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="info-box">
+                            <small>Telefone</small>
+                            <p>(12) 98888-8888</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="info-box">
+                            <small>Parentesco</small>
+                            <p>Mãe</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="tab-pane fade" id="inf_medicas">
+
+                <!-- BOTÃO EDITAR INFORMAÇÕES MÉDICAS -->
+                <div class="d-flex justify-content-end mb-3">
+                    <button class="btn btn-primary rounded-5 px-4" data-bs-toggle="modal"
+                        data-bs-target="#modalEditarMedico">
+                        <i class="fa-solid fa-pen-to-square me-2"></i>
+                        Editar Informações Médicas
+                    </button>
+                </div>
+
+                <!-- ================= DADOS BÁSICOS ================= -->
+                <h5 class="text-primary mb-3 mt-4">
+                    <i class="fa-solid fa-user"></i> Dados Básicos
+                </h5>
+
+                <div class="row g-3">
+
+                    <div class="col-md-3">
+                        <div class="info-box text-center">
+                            <small>Altura</small>
+                            <p>1,50 m</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="info-box text-center">
+                            <small>Peso</small>
+                            <p>60 kg</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="info-box text-center">
+                            <small>IMC</small>
+                            <p>48.8</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="info-box text-center">
+                            <small>Tipo Sanguíneo</small>
+                            <p>O+</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <!-- ================= ALERGIAS ================= -->
+                <h5 class="text-danger mb-3">
+                    <i class="fa-solid fa-triangle-exclamation"></i> Alergias
+                </h5>
+
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="info-box">
+                            <small>Alimentar</small>
+                            <p>Amendoim</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="info-box">
+                            <small>Medicamentos</small>
+                            <p>Penicilina</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="info-box">
+                            <small>Animais / Outros</small>
+                            <p>Pelos de gato</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <!-- ================= RESTRIÇÕES ================= -->
+                <h5 class="text-black mb-3">
+                    <i class="fa-solid fa-ban"></i> Restrições
+                </h5>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="info-box">
+                            <small>Alimentar</small>
+                            <p>Baixo consumo de açúcar</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="info-box">
+                            <small>Médicas</small>
+                            <p>Evitar esforço intenso</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <!-- ================= CONDIÇÕES ================= -->
+                <h5 class="text-danger mb-3">
+                    <i class="fa-solid fa-heart-circle-exclamation"></i> Condições Médicas
+                </h5>
+
+                <div class="info-box">
+                    <p>Hipertensão • Diabetes • Asma</p>
+                </div>
+
+                <hr>
+
+                <!-- ================= MEDICAÇÕES ================= -->
+                <h5 class="text-primary mb-3">
+                    <i class="fa-solid fa-pills"></i> Medicações
+                </h5>
+
+                <div class="info-box">
+                    <p>Losartana 50mg - 1x ao dia</p>
+                    <p>Metformina 500mg - 2x ao dia</p>
+                    <p>Aerolin - Quando necessário</p>
+                </div>
+
+                <hr>
+
+                <!-- ================= DOCUMENTOS ================= -->
+                <h5 class="text-black mb-3">
+                    <i class="fa-solid fa-file-medical"></i> Documentos Médicos
+                </h5>
+
+                <div class="row g-3">
+
+                    <div class="col-md-3">
+                        <a href="receitas_medicas.html" class="card_acao text-decoration-none text-dark">
+                            <div class="info-box text-center card-documento">
+                                <i class="fa-solid fa-file-prescription fa-2x mb-2 text-primary"></i>
+                                <p>Receitas Médicas</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-3">
+                        <a href="exame.html" class="card_acao text-decoration-none text-dark">
+                            <div class="info-box text-center card-documento">
+                                <i class="fa-solid fa-file-waveform fa-2x mb-2 text-success"></i>
+                                <p>Exames</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-3">
+                        <a href="atestados.html" class="card_acao text-decoration-none text-dark">
+                            <div class="info-box text-center card-documento">
+                                <i class="fa-solid fa-file-circle-check fa-2x mb-2 text-warning"></i>
+                                <p>Atestados</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-3">
+                        <a href="cartao_sus.html" class="card_acao text-decoration-none text-dark">
+                            <div class="info-box text-center card-documento">
+                                <img src="./img/cartao_cns.png" alt="Cartão SUS" class="img-cartao-cns">
+                                <p> CNS</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <hr>
+
+                <!-- ================= VACINAS ================= -->
+                <h5 class="text-success mb-3">
+                    <i class="fa-solid fa-syringe"></i> Carteirinha de Vacinação
+                </h5>
+
+                <div class="row g-3">
+
+                    <!-- UPLOAD -->
+                    <div class="col-md-12">
+                        <div class="info-box text-center card-vacina-upload">
+                            <label class="btn btn-outline-success rounded-5 btn-sm">
+                                <i class="fa-solid fa-upload"></i> Enviar Carteirinha
+                                <input type="file" id="uploadCarteirinha" accept=".pdf,image/*" hidden>
+                            </label>
+
+                            <!-- PREVIEW -->
+                            <div class="preview-carteirinha mt-3 d-none" id="previewCarteirinha">
+                                <img id="imgCarteirinha" src="" alt="Carteirinha de vacinação">
+                                <a href="#" target="_blank" id="pdfCarteirinha"
+                                    class="btn btn-outline-primary rounded-5 btn-sm mt-3 d-none">
+                                    <i class="fa-solid fa-eye"></i> Visualizar PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VACINAS EM DIA -->
+                    <div class="col-md-4">
+                        <div class="info-box card-status-vacina vacina-em-dia">
+                            <h6 class="text-success">✔ Vacinas em dia</h6>
+                            <p>COVID-19</p>
+                            <p>Tétano</p>
+                            <p>Febre Amarela</p>
+                        </div>
+                    </div>
+
+                    <!-- VACINAS ATRASADAS -->
+                    <div class="col-md-4">
+                        <div class="info-box card-status-vacina vacina-atrasada">
+                            <h6 class="text-danger">🚨 Vacinas atrasadas</h6>
+                            <p>Hepatite B</p>
+                        </div>
+                    </div>
+
+                    <!-- PRÓXIMA DOSE -->
+                    <div class="col-md-4">
+                        <div class="info-box card-status-vacina vacina-proxima">
+                            <h6 class="text-warning">⚠ Próxima dose</h6>
+                            <p>Influenza (Junho/2026)</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="tab-pane fade" id="historico_saude">
+                <h4> <i class="fa-solid fa-folder-plus"></i> Historico de Saúde</h4>
+
+            </div>
+
+
+
+
+            <div class="tab-pane fade mt-4" id="calendario">
+
+
+                <!-- BUSCA -->
+                <div class="mb-4">
+                    <input type="text" class="form-control rounded-5" placeholder="🔍 Buscar evento médico...">
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- CALENDÁRIO -->
+                    <div class="col-md-5">
+                        <div class="calendario-box p-3">
+
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <button class="btn btn-light">◀</button>
+                                <h5>Março 2026</h5>
+                                <button class="btn btn-light">▶</button>
+                            </div>
+
+                            <div class="dias-semana">
+                                <span>D</span>
+                                <span>S</span>
+                                <span>T</span>
+                                <span>Q</span>
+                                <span>Q</span>
+                                <span>S</span>
+                                <span>S</span>
+                            </div>
+
+                            <div class="grid-calendario">
+
+                                <span class="desativado">23</span>
+                                <span class="desativado">24</span>
+                                <span class="ativo">25</span>
+                                <span>26</span>
+                                <span>27</span>
+                                <span>28</span>
+                                <span>29</span>
+
+                                <span>30</span>
+                                <span>31</span>
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+
+                                <span>6</span>
+                                <span>7</span>
+                                <span class="tem-evento">8</span>
+                                <span>9</span>
+                                <span>10</span>
+                                <span class="tem-evento">11</span>
+                                <span>12</span>
+
+                                <span>13</span>
+                                <span>14</span>
+                                <span>15</span>
+                                <span>16</span>
+                                <span class="tem-evento">17</span>
+                                <span>18</span>
+                                <span>19</span>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- EVENTOS -->
+                    <div class="col-md-7">
+
+                        <h6 class="mb-3">📌 Quarta-feira, 25 de Março</h6>
+
+                        <!-- CONSULTA -->
+                        <div class="evento consulta">
+                            <div>
+                                <strong>Consulta</strong><br>
+                                Dr. Eduardo Mendes<br>
+                                <small>Cardiologista</small><br>
+                                <small>📍 Av. Andrômeda, 123 - São José dos Campos</small>
+                            </div>
+                            <span>10:00</span>
+                        </div>
+
+                        <!-- COLETA -->
+                        <div class="evento coleta">
+                            <div>
+                                <strong>Coleta de Medicamentos</strong><br>
+                                <small>📅 25/03/2026</small><br>
+                                <small>🕐 Tarde (13:00 - 17:30)</small><br>
+
+                                <p class="text-success mt-1">💸 Pago via Pix</p>
+                            </div>
+                            <span>13:00</span>
+                        </div>
+
+                        <!-- RECEITA -->
+                        <div class="evento receita">
+                            <div>
+                                <strong>Renovar Receita</strong><br>
+                                <small>📅 25/03/2026</small>
+                            </div>
+                            <span>09:00</span>
+                        </div>
+
+                        <!-- BOTÃO -->
+                        <div class="text-end mt-3">
+                            <button class="btn btn-primary rounded-5 px-4">
+                                <i class="fa-solid fa-plus"></i> Adicionar Evento
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+        <!-- MENU MOBILE -->
+        <nav class="menu_mobile">
+
+            <a href="home.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Início</span>
+            </a>
+
+            <a href="perfil.html" class="ativo">
+                <i class="fa-solid fa-user"></i>
+                <span>Perfil</span>
+            </a>
+
+            <a href="remedio.html">
+                <i class="fa-solid fa-pills"></i>
+                <span>Remédios</span>
+            </a>
+
+            <a href="dicas_de_saude.html">
+                <i class="fa-solid fa-heart"></i>
+                <span>Dicas</span>
+            </a>
+
+            <a href="pontosColeta.html">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Coleta</span>
+            </a>
+
+        </nav>
+
+
+
+    </main>
+    <script src="./js/script.js"></script>
+    <script src="./js/perfil.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

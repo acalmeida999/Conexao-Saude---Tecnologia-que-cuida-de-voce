@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conexão Saúde - Ciclo Limpo</title>
+  <link rel="shortcut icon" href="./img/favicon.jpg" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/pontoscoleta.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+</style>
+</head>
+
+<body class=" d-flex">
+
+  <!-- MENU LATERAL -->
+  <header class="d-flex flex-column align-items-center m-3 rounded-5 pb-3">
+
+
+    <div class="d-flex flex-column align-items-center mb-4 mt-5">
+
+      <img class="foto_usuario rounded-circle" src="./img/icone_usuario2.png">
+
+      <span class="nome_usuario"></span>
+
+    </div>
+
+    <nav class="nav_header mt-4">
+
+      <ul class="menu_header d-flex flex-column gap-4 list-unstyled">
+
+        <li>
+          <a href="home.html" class="text-decoration-none text-dark">
+            <i class="fa-solid fa-house me-2"></i> Início
+          </a>
+        </li>
+
+        <li>
+          <a href="perfil.html" class="text-decoration-none text-dark">
+            <i class="fa-solid fa-user me-2"></i> Perfil
+          </a>
+        </li>
+
+        <li>
+          <a href="remedio.html" class="text-decoration-none text-dark">
+            <i class="fa-solid fa-pills me-2"></i> Remédios
+          </a>
+        </li>
+
+        <li>
+          <a href="dicas_de_saude.html" class="text-decoration-none text-dark">
+            <i class="fa-solid fa-hand-holding-heart me-2"></i> Dicas de Saúde
+          </a>
+        </li>
+
+        <li>
+          <a href="pontosColeta.html" class="text-decoration-none text-dark">
+            <i class="fa-solid fa-map-location-dot me-2"></i> Pontos de Coleta
+          </a>
+        </li>
+
+        <li>
+          <a href="configuracao.html" class="text-decoration-none text-dark">
+            <i class="fa-solid fa-gear me-2"></i> Configuração
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html" class="text-decoration-none text-dark">
+            <i class="fa-solid fa-right-from-bracket me-2"></i> Sair
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+  </header>
+
+
+  <div class="container text-center mt-4">
+    <div>
+      <h1 class="mb-4 titulo-degrade">CICLO LIMPO</h1>
+    </div>
+
+    <main>
+
+      <div class="row justify-content-center g-4 mb-4">
+        <div class="col-md-3">
+          <button class="btn-card" id="btnUBS">
+            <div class="card icon-card p-3 shadow-sm border-0">
+              <span style="font-size: 2rem;">🏥</span>
+              <h3 class="h6 mt-2"><strong>ENCONTRAR UBS</strong></h3>
+            </div>
+          </button>
+        </div>
+
+        <div class="col-md-3">
+          <button class="btn-card" id="btnColeta">
+            <div class="card icon-card p-3 shadow-sm border-0">
+              <span style="font-size: 2rem;">🚛</span>
+              <h3 class="h6 mt-2"><strong>SOLICITAR COLETA</strong></h3>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <article id="textoInfo" class="mt-4 p-4 bg-white shadow-sm rounded text-start">
+        <p class="lead">
+          Você sabia que o destino que você dá aos remédios afeta diretamente a natureza e a segurança dos trabalhadores
+          da limpeza urbana? O descarte incorreto no lixo comum ou na rede de esgoto contamina o solo e a água, mas o
+          risco imediato é para quem manuseia os resíduos.
+        </p>
+        <hr>
+        <h2 class="h5 mb-3">Faça a sua parte em 3 passos simples:</h2>
+
+        <div class="mb-3">
+          <strong>1º Separe as embalagens:</strong>
+          <p class="text-muted">A caixa de papel e a bula não têm contato com o remédio. Elas podem ser descartadas no
+            lixo reciclável comum.</p>
+        </div>
+
+        <div class="mb-3">
+          <strong>2º Proteja os Perfurantes:</strong>
+          <p class="text-muted">Agulhas e seringas devem ir sempre dentro de um recipiente rígido (como uma garrafa PET
+            ou lata) para não furar os sacos plásticos e não ferir ninguém.</p>
+        </div>
+
+        <div class="mb-3">
+          <strong>3º Mantenha o blister e o frasco:</strong>
+          <p class="text-muted">Nunca retire os comprimidos da cartela (blister) nem esvazie os líquidos. Isso garante a
+            segurança de quem manuseia o resíduo.</p>
+        </div>
+      </article>
+
+      <section id="infoColeta" class="mt-4 p-4 bg-white shadow-sm rounded">
+        <h4 class="mb-3">Endereço de Coleta</h4>
+        <p class="fs-5">R. Saigiro Nakamura, 400 - Vila Industrial, São José dos Campos - SP, 12220-280.</p>
+        <button class="btn btn-primary mt-3 px-5" onclick="alert('Coleta Confirmada!')">Confirmar</button>
+      </section>
+
+      <!-- Dentro da section id="listaUBS" -->
+      <section id="listaUBS" class="mt-5">
+        <h2 class="mb-4">Pontos de Entrega</h2>
+
+        <!-- Filtro de proximidade movido para a direita -->
+        <div class="mb-4 d-flex justify-content-end">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="filtroRaio">
+            <label class="form-check-label" for="filtroRaio">Mostrar unidades mais próximas</label>
+          </div>
+        </div>
+
+        <div class="row g-4 text-start" id="containerCards">
+          <!-- Card 1 (Jardim Colonial) -->
+          <div class="col-md-4 card-item" data-lat="-23.2642" data-lon="-45.9015">
+            <div class="card shadow-sm p-3 h-100 border-0">
+              <h4 class="fw-bold h5">Jardim Colonial</h4>
+              <p class="small">Av. José Ribeiro Bastos, 185<br>São José dos Campos - SP</p>
+              <a href="https://www.google.com/maps/search/?api=1&query=Av.+José+Ribeiro+Bastos,+185" target="_blank"
+                class="btn btn-outline-success btn-sm mt-auto">Ver no Maps</a>
+            </div>
+          </div>
+
+          <!-- Card 2 (Vila Industrial) -->
+          <div class="col-md-4 card-item" data-lat="-23.1791" data-lon="-45.8612">
+            <div class="card shadow-sm p-3 h-100 border-0">
+              <h4 class="fw-bold h5">Vila Industrial</h4>
+              <p class="small">R. Misael Marçal, 190<br>São José dos Campos - SP</p>
+              <a href="https://www.google.com/maps/search/?api=1&query=R.+Misael+Marçal,+190" target="_blank"
+                class="btn btn-outline-success btn-sm mt-auto">Ver no Maps</a>
+            </div>
+          </div>
+
+          <!-- Card 3 (Chácaras Majestic) -->
+          <div class="col-md-4 card-item" data-lat="-23.1556" data-lon="-45.8152">
+            <div class="card shadow-sm p-3 h-100 border-0">
+              <h4 class="fw-bold h5">Chácaras Majestic</h4>
+              <p class="small">R. Quebra-Eixo, 275<br>São José dos Campos - SP</p>
+              <a href="https://www.google.com/maps/search/?api=1&query=R.+Quebra-Eixo,+275" target="_blank"
+                class="btn btn-outline-success btn-sm mt-auto">Ver no Maps</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- MENU MOBILE -->
+  <nav class="menu_mobile">
+
+    <a href="home.html" >
+      <i class="fa-solid fa-house"></i>
+      <span>Início</span>
+    </a>
+
+    <a href="perfil.html">
+      <i class="fa-solid fa-user"></i>
+      <span>Perfil</span>
+    </a>
+
+    <a href="remedio.html">
+      <i class="fa-solid fa-pills"></i>
+      <span>Remédios</span>
+    </a>
+
+    <a href="dicas_de_saude.html">
+      <i class="fa-solid fa-heart"></i>
+      <span>Dicas</span>
+    </a>
+
+    <a href="pontosColeta.html" class="ativo">
+      <i class="fa-solid fa-location-dot"></i>
+      <span>Coleta</span>
+    </a>
+
+  </nav>
+
+
+
+  <script src="./js/script.js"></script>
+  <script src="js/pontosColeta.js"></script>
+</body>
+
+</html>

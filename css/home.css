@@ -1,0 +1,573 @@
+/* ================= ÁREA MEDICAMENTOS ================= */
+.rotina_medicamentos {
+    width: 100%;
+    padding: 20px;
+    border-radius: 25px;
+
+    background: linear-gradient(135deg, #7DBFFC, #e3eefa, #7DBFFC);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* TÍTULO */
+.rotina_medicamentos h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1f2d3d;
+    text-align: center;
+}
+
+/* LINHA BONITA EMBAIXO */
+.rotina_medicamentos h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #337dff;
+    border-radius: 10px;
+    margin: 6px auto 0;
+}
+
+/* ================= BOTÕES DE AÇÃO ================= */
+
+.acoes_medicamento {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* CARD BASE */
+.card_acao {
+    width: 180px;
+    height: 95px;
+    background: linear-gradient(135deg, #ffffff, #f3f8ff);
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    text-decoration: none;
+    color: #1f2d3d;
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ÍCONE */
+.card_acao i {
+    font-size: 26px;
+    transition: 0.3s;
+}
+
+/* TEXTO */
+.card_acao span {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* HOVER */
+.card_acao:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card_acao:hover i {
+    transform: scale(1.2);
+}
+
+/* CLICK */
+.card_acao:active {
+    transform: scale(0.95);
+}
+
+/* ================= CORES POR BOTÃO ================= */
+
+/* REMÉDIO */
+.card_acao:nth-child(1) i {
+    color: #337dff;
+}
+
+/* RECEITA */
+.card_acao:nth-child(2) i {
+    color: #28a745;
+}
+
+/* FOTO */
+.card_acao:nth-child(3) i {
+    color: #ff9800;
+}
+
+
+
+/* ================= LISTA ================= */
+#lista_medicamentos {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+
+/* ================= CARD ================= */
+.card_medicamento {
+    width: 100%;
+    background-size: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+
+/* ================= FUNDOS ================= */
+.card_ok {
+    background-image: url(../img/azul.png);
+}
+
+.card_alerta {
+    background-image: url(../img/amarelo.png);
+}
+
+.card_critico {
+    background-image: url(../img/vermelho.png);
+}
+
+
+/* ================= PROGRESS ================= */
+.progress {
+    height: 8px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+    height: 100%;
+    transition: width 0.3s;
+}
+
+/* cores da barra */
+.card_ok .progress-bar {
+    background-color: #28a745;
+}
+
+.card_alerta .progress-bar {
+    background-color: #ffc107;
+}
+
+.card_critico .progress-bar {
+    background-color: #dc3545;
+}
+
+
+/* ================= BOTÕES EDITAR/EXCLUIR ================= */
+
+/* BOTÕES EDITAR / EXCLUIR  */
+.editar_medicamento {
+    width: 36px;
+    height: 36px;
+    border-radius: 50% !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    border: none;
+
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(4px);
+
+    transition: 0.2s;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.excluir_medicamento {
+    width: 36px;
+    height: 36px;
+    border-radius: 50% !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    border: none;
+
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(4px);
+
+    transition: 0.2s;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ÍCONES */
+.editar_medicamento i {
+    color: #337dff;
+}
+
+.excluir_medicamento i {
+    color: #dc3545;
+}
+
+/* HOVER */
+.editar_medicamento:hover {
+    background-color: #337dff;
+}
+
+.editar_medicamento:hover i {
+    color: white;
+}
+
+.excluir_medicamento:hover {
+    background-color: #dc3545;
+}
+
+.excluir_medicamento:hover i {
+    color: white;
+}
+
+
+/* ================= BOTÃO TOMAR ================= */
+.btn_tomar {
+    background-color: #337dff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 24px;
+    font-size: 15px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn_tomar:hover {
+    background-color: #1f5fd6;
+}
+
+.tomado {
+    color: #28a745 !important;
+    font-weight: 600;
+}
+
+/* ================= BOTÃO REPOR ================= */
+.btn_repor {
+    display: none;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn_repor:hover {
+    background-color: #e68900;
+}
+
+/* aparece no amarelo e vermelho */
+.card_alerta .btn_repor,
+.card_critico .btn_repor {
+    display: block;
+}
+
+
+/* ================= ALERTA ================= */
+.alerta {
+    font-size: 14px;
+}
+
+
+/* ================= INFO ================= */
+.info_remedio {
+    font-size: 14px;
+    color: #555;
+    cursor: help;
+}
+
+.info_remedio span {
+    text-decoration: underline dotted;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 1199px) {
+
+    .rotina_medicamentos {
+        padding: 15px;
+        border-radius: 20px;
+    }
+
+    .rotina_medicamentos h2 {
+        font-size: 20px;
+    }
+
+    .acoes_medicamento {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        width: 100%;
+    }
+
+    .card_acao {
+        width: 100%;
+        height: 80px;
+        border-radius: 15px;
+    }
+
+    .card_acao i {
+        font-size: 22px;
+    }
+
+    .card_acao span {
+        font-size: 11px;
+        text-align: center;
+    }
+
+
+}
+
+
+/* ================= RESPONSIVO CARDS ================= */
+
+/* TABLET */
+@media (max-width: 768px) {
+
+    .card_medicamento {
+        padding: 15px !important;
+    }
+
+    .card_medicamento h4 {
+        font-size: 18px;
+    }
+
+    .card_medicamento small {
+        font-size: 12px;
+    }
+
+    .progress {
+        height: 6px;
+    }
+
+}
+
+
+/* CELULAR */
+@media (max-width: 576px) {
+
+    /* TOPO QUEBRA */
+    .card_medicamento {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    /* BOTÕES FICAM MENORES */
+    .editar_medicamento,
+    .excluir_medicamento {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* ALERTA + BOTÃO REPOR */
+    .alerta_container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .btn_repor {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* BOTÃO TOMAR */
+    .btn_tomar {
+        width: 100%;
+    }
+
+    /* TEXTO AJUSTE */
+    .card_medicamento {
+        font-size: 13px;
+    }
+
+    .card_medicamento h4 {
+        font-size: 16px;
+    }
+
+
+    /* modal */
+    .modal-dialog {
+        margin: 10px;
+        max-width: 100%;
+    }
+
+    .btn-pill {
+        flex: 1;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .card-custom {
+        padding: 12px;
+    }
+}
+
+
+
+.card-custom {
+    background: #fff;
+    border-radius: 18px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.btn-pill {
+    border-radius: 30px;
+    padding: 6px 15px;
+    border: 1px solid #ddd;
+    background: #f8f9fa;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-selected {
+    background: #4a90e2 !important;
+    color: #fff !important;
+    border: none;
+}
+
+.hidden {
+    display: none;
+}
+
+/* DOR */
+#valorDor {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.texto-dor {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.dor-baixa {
+    color: #28a745;
+}
+
+.dor-media {
+    color: #ffc107;
+}
+
+.dor-alta {
+    color: #dc3545;
+}
+
+
+
+/* ================= CARD STATUS ================= */
+
+.card_status {
+    background: linear-gradient(135deg, #7DBFFC, #e3eefa, #7DBFFC);
+    border-radius: 20px;
+    padding: 18px 22px;
+    margin-top: 15px;
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* TEXTO */
+.titulo_status {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2d3d;
+}
+
+.sub_status {
+    font-size: 13px;
+    color: #6c757d;
+}
+
+/* ÍCONE */
+.icone_status {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4a90e2, #2f6edb);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+.icone_status i {
+    color: #fff;
+    font-size: 20px;
+}
+
+/* HOVER */
+.card_status:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #eaf2ff, #dbe9ff);
+}
+
+/* ÍCONE ANIMA */
+.card_status:hover .icone_status {
+    transform: scale(1.1);
+}
+
+/* CLICK */
+.card_status:active {
+    transform: scale(0.98);
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 576px) {
+
+    .card_status {
+        padding: 15px;
+    }
+
+    .titulo_status {
+        font-size: 16px;
+    }
+
+    .sub_status {
+        font-size: 12px;
+    }
+
+    .icone_status {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icone_status i {
+        font-size: 16px;
+    }
+
+
+}

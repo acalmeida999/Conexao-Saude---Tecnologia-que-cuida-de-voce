@@ -1,0 +1,104 @@
+/* ================= CONTAINER ================= */
+body {
+  background: linear-gradient(135deg, #7DBFFC, #e3eefa, #7DBFFC);
+}
+
+/* CENTRALIZA */
+#lista_medicamentos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* ================= CARD FORM ================= */
+#lista_medicamentos .card {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+}
+
+
+/* ================= TÍTULO ================= */
+.card h3 {
+  font-weight: 700;
+  color: #1f2d3d;
+}
+
+.card h3 i {
+  color: #337dff;
+}
+
+
+/* ================= INPUTS ================= */
+.form-control,
+.form-select {
+  border-radius: 12px;
+  padding: 10px;
+}
+
+
+/* ================= CHECKBOX / RADIO ================= */
+.form-check-input {
+  cursor: pointer;
+}
+
+.form-check-label {
+  cursor: pointer;
+}
+
+
+/* ================= BOTÃO ADD HORÁRIO ================= */
+#btnAddHorario {
+  border-radius: 20px;
+}
+
+
+/* ================= HORÁRIO ITEM ================= */
+.horario_item {
+  align-items: center;
+}
+
+.btnRemoverHorario {
+  border-radius: 50% !important;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+}
+
+
+/* ================= ALERT INFO ================= */
+.alert-info {
+  border-radius: 15px;
+  background-color: #e3f2fd;
+  border: none;
+}
+
+
+/* ================= BOTÕES FINAL ================= */
+.btn-success {
+  border-radius: 25px;
+  padding: 10px 20px;
+}
+
+.btn-secondary {
+  border-radius: 25px;
+}
+
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
+
+  #lista_medicamentos .card {
+    max-width: 95%;
+    padding: 20px;
+  }
+
+  .w-25 {
+    width: 100% !important;
+  }
+
+}

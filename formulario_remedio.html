@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conexão Saúde - Incluir Remedio</title>
+    <link rel="shortcut icon" href="./img/favicon.jpg" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/formulario_remedio.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body class="d-flex">
+
+
+    <!-- LISTA DE MEDICAMENTOS -->
+    <div id="lista_medicamentos" class="d-flex flex-column rounded-5 mt-4 gap-3 w-100 align-items-center ">
+
+        <div class="card p-4 rounded-5 shadow-sm">
+
+            <h3 class="text-center mb-4">
+
+                <i class="fa-solid fa-pills me-2"></i>
+                Cadastrar Medicamento
+
+            </h3>
+
+            <form id="form_medicamento">
+
+                <!-- NOME -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">Nome do remédio</label>
+
+                    <input type="text" id="nomeRemedio" class="form-control" required>
+
+                </div>
+
+                <!-- DOSAGEM -->
+
+                <div class="mb-3">
+
+                    <label class="form-label">Dosagem</label>
+
+                    <input type="text" id="dosagemRemedio" class="form-control" placeholder="Ex: 500mg">
+
+                </div>
+
+                <!-- DOSE -->
+
+                <div class="mb-4">
+
+                    <label class="form-label">Quantidade</label>
+
+                    <select id="doseRemedio" class="form-select">
+
+                        <option>½ comprimido</option>
+                        <option>1 comprimido</option>
+                        <option>2 comprimidos</option>
+                        <option>3 comprimidos</option>
+
+                    </select>
+
+                </div>
+
+                <hr>
+
+                <h5>Tipo de tratamento</h5>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tipoTratamento" id="continuo">
+                    <label class="form-check-label" for="continuo">Contínuo</label>
+                </div>
+
+                <div class="form-check mt-3">
+                    <input class="form-check-input" type="radio" name="tipoTratamento" id="diasSemana">
+                    <label class="form-check-label" for="diasSemana">Dias da semana</label>
+                </div>
+
+                <div class="my-2" id="diasContainer">
+
+                    <div class="d-flex flex-wrap gap-3">
+
+                        <div class="form-check">
+                            <input class="form-check-input dias" type="checkbox" id="seg">
+                            <label class="form-check-label" for="seg">Seg</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input dias" type="checkbox" id="ter">
+                            <label class="form-check-label" for="ter">Ter</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input dias" type="checkbox" id="qua">
+                            <label class="form-check-label" for="qua">Qua</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input dias" type="checkbox" id="qui">
+                            <label class="form-check-label" for="qui">Qui</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input dias" type="checkbox" id="sex">
+                            <label class="form-check-label" for="sex">Sex</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input dias" type="checkbox" id="sab">
+                            <label class="form-check-label" for="sab">Sab</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input dias" type="checkbox" id="dom">
+                            <label class="form-check-label" for="dom">Dom</label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <hr>
+
+                <h5>Duração do tratamento</h5>
+
+                <div class="form-check">
+
+                    <input class="form-check-input" type="radio" name="duracao" value="indeterminado">
+
+                    <label class="form-check-label">Indeterminado</label>
+
+                </div>
+
+                <div class="form-check d-flex align-items-center gap-2">
+
+                    <input class="form-check-input" type="radio" name="duracao" value="dias">
+
+                    <label class="form-check-label me-3">Dias</label>
+
+                    <input type="number" id="campoDias" class="form-control" style="width: 4rem;">
+
+                </div>
+
+                <div class="form-check d-flex align-items-center gap-2">
+
+                    <input class="form-check-input" type="radio" name="duracao" value="meses">
+
+                    <label class="form-check-label">Meses</label>
+
+                    <input type="number" id="campoMeses" class="form-control" style="width: 4rem;">
+
+                </div>
+
+                <hr>
+
+                <h5>Frequência de uso</h5>
+
+                <label class="form-label">Horários</label>
+
+                <div id="listaHorarios" class="d-flex flex-column gap-2" style="width: 14rem;">
+
+                    <div class="horario_item d-flex gap-2">
+
+                        <input type="time" class="form-control">
+
+                        <button type="button" class="btn btn-outline-danger btnRemoverHorario" title="Excluir Hora">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <button type="button" id="btnAddHorario" class="btn btn-outline-primary mt-2">
+                    <i class="fa-solid fa-plus"></i> Adicionar horário
+                </button>
+                <hr>
+
+                <div class="mb-3">
+
+                    <label class="form-label">Quantidade de comprimidos</label>
+
+                    <input type="number" id="quantidadeRemedio" class="form-control w-25">
+
+                    <small class="text-muted fw-bold fst-italic ">
+                        Informe quantos comprimidos você possui para calcular a duração do tratamento.
+                    </small>
+
+                    <div class="alert alert-info mt-3 p-3">
+
+                        <strong><i class="fa-solid fa-circle-info me-2"> Exemplo </i></strong>
+
+                        <ul class="mb-0 mt-2">
+                            <li>Quantidade: 30</li>
+                            <li>Dose: 1 comprimido</li>
+                            <li>Horários: 2 por dia</li>
+                            <li><strong>Duração estimada: 15 dias</strong></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <h5>Observações</h5>
+
+                <div class="form-check">
+
+                    <input class="form-check-input" type="checkbox">
+
+                    <label class="form-check-label">Tomar em jejum</label>
+
+                </div>
+
+                <div class="form-check">
+
+                    <input class="form-check-input" type="checkbox">
+
+                    <label class="form-check-label">Tomar após café da manhã</label>
+
+                </div>
+
+                <div class="form-check">
+
+                    <input class="form-check-input" type="checkbox">
+
+                    <label class="form-check-label">Tomar antes da refeição</label>
+
+                </div>
+
+                <div class="form-check">
+
+                    <input class="form-check-input" type="checkbox">
+
+                    <label class="form-check-label">Tomar com a refeição</label>
+
+                </div>
+
+                <div class="form-check">
+
+                    <input class="form-check-input" type="checkbox">
+
+                    <label class="form-check-label">Tomar após refeição</label>
+
+                </div>
+
+                <div class="form-check">
+
+                    <input class="form-check-input" type="checkbox">
+
+                    <label class="form-check-label">Tomar antes de dormir</label>
+
+                </div>
+
+                <textarea class="form-control mt-2" rows="2" placeholder="Outras observações"></textarea>
+
+                <hr>
+
+                <div class="d-flex justify-content-end gap-3">
+
+                    <a href="home.html" class="btn btn-secondary">
+
+                        Cancelar
+
+                    </a>
+
+                    <button type="submit" class="btn btn-success">
+
+                        Salvar medicamento
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <script src="./js/formulario_remedio.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

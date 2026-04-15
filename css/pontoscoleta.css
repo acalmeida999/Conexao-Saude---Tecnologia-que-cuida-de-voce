@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 1. Fundo da página com degradê azul claro e verde claro */
+body {
+  background: #d2ddf0;
+  min-height: 100vh;
+  background-attachment: fixed;
+  transition: background 0.5s ease;
+}
+
+/* 2. Container de texto com o mesmo degradê */
+#textoInfo {
+  background: #fff !important;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* 3. Marca d'água para UBS */
+body.bg-ubs {
+  background: url('file:///C:/Users/Alexandre/Desktop/encontrarUbs.jpg') no-repeat center center !important;
+  background-size: cover !important;
+}
+
+/* 4. Marca d'água para Solicitar Coleta */
+body.bg-coleta {
+  background: url('file:///C:/Users/Alexandre/Desktop/solicitarColeta.jpg') no-repeat center center !important;
+  background-size: cover !important;
+}
+
+/* 5. Regras de exibição (IMPORTANTE) */
+#listaUBS,
+#infoColeta {
+  display: none;
+}
+
+.mostrar {
+  display: block !important;
+}
+
+/* Estilo dos cards e títulos */
+.btn-card {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 100%;
+  text-align: inherit;
+}
+
+.icon-card {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.icon-card:hover {
+  transform: scale(1.05);
+}
+
+.titulo-degrade {
+  background: linear-gradient(90deg, #2e7d32, #0277bd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}

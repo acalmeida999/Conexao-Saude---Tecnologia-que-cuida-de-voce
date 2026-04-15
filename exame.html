@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conexão Saúde - Exames</title>
+    <link rel="shortcut icon" href="./img/favicon.jpg" type="image/png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/exame.css">
+    <link rel="stylesheet" href="./css/receitas_medicas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- TOPO -->
+        <div class="topo">
+            <a href="home.html" class="btn-voltar">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+
+            <div class="titulo-area">
+                <h1>Exames</h1>
+                <p>Organize seus resultados e solicitações</p>
+            </div>
+        </div>
+
+        <!-- NOVO EXAME -->
+        <div class="text-center mb-4">
+            <button class="btn-toggle-documento" data-bs-toggle="collapse" data-bs-target="#formExame">
+                <i class="fa-solid fa-plus"></i>
+                Novo Exame
+            </button>
+        </div>
+
+        <!-- FORM ESCONDIDO -->
+        <div class="collapse" id="formExame">
+            <section class="card-form">
+                <div class="acoes-upload">
+                    <button class="acao-btn">
+                        <i class="fa-solid fa-camera"></i>
+                        Tirar Foto do Exame
+                    </button>
+
+                    <button class="acao-btn">
+                        <i class="fa-solid fa-folder"></i>
+                        Anexar PDF / Imagem
+                    </button>
+                </div>
+
+                <div class="dropzone">
+                    <i class="fa-solid fa-upload"></i>
+                    <p>Arraste aqui o arquivo</p>
+                </div>
+
+                <div class="form-grid">
+                    <input class="campo" type="text" placeholder="Nome do Exame">
+                    <input class="campo" type="text" placeholder="Nome do Médico">
+                    <input class="campo" type="text" placeholder="Especialidade">
+                    <input class="campo" type="text" placeholder="Laboratório / Clínica">
+
+                    <label>Data do Exame</label>
+                    <input class="campo" type="date">
+
+                    <textarea placeholder="Observações"></textarea>
+                </div>
+
+                <button class="btn-salvar">Salvar Exame</button>
+            </section>
+        </div>
+
+        <!-- LISTA -->
+        <section class="lista">
+            <h2>Meus Exames</h2>
+
+            <div class="filtro-documentos">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Buscar por exame, médico ou especialidade">
+            </div>
+
+            <div class="documento-card">
+                <div class="preview">
+                    <i class="fa-solid fa-file-waveform"></i>
+                </div>
+
+                <div class="documento-info">
+                    <h3>Hemograma Completo</h3>
+                    <p>Solicitado por: Dr. João Silva</p>
+
+                    <p class="especialidade">
+                        <i class="fa-solid fa-stethoscope"></i>
+                        Cardiologista
+                    </p>
+
+                    <p>Realizado em 30/04/2026</p>
+
+                    <div class="acoes-card">
+                        <button>
+                            <i class="fa-solid fa-eye"></i>
+                            Ver Exame
+                        </button>
+
+                        <button>
+                            <i class="fa-solid fa-share-nodes"></i>
+                            Compartilhar
+                        </button>
+
+                        <button>
+                            <i class="fa-solid fa-trash"></i>
+                            Excluir
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conexão Saúde - Receitas Médicas</title>
+    <link rel="shortcut icon" href="./img/favicon.jpg" type="image/png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/receitas_medicas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- TOPO -->
+        <div class="topo">
+            <a href="perfil.html" class="btn-voltar">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+
+            <div class="titulo-area">
+                <h1>Receitas Médicas</h1>
+                <p>Organize suas prescrições</p>
+            </div>
+        </div>
+
+        <!-- NOVA RECEITA -->
+        <div class="text-center mb-4">
+            <button class="btn-toggle-receita" data-bs-toggle="collapse" data-bs-target="#formReceita">
+                <i class="fa-solid fa-plus"></i>
+                Nova Receita
+            </button>
+        </div>
+
+        <!-- FORM ESCONDIDO -->
+        <div class="collapse" id="formReceita">
+            <section class="card-form">
+                <div class="acoes-upload">
+                    <button class="acao-btn">
+                        <i class="fa-solid fa-camera"></i>
+                        Tirar Foto da Receita
+                    </button>
+
+                    <button class="acao-btn">
+                        <i class="fa-solid fa-folder"></i>
+                        Anexar PDF / Imagem
+                    </button>
+                </div>
+
+                <div class="dropzone">
+                    <i class="fa-solid fa-upload"></i>
+                    <p>Arraste aqui o arquivo</p>
+                </div>
+
+                <div class="form-grid">
+                    <input class="campo" type="text" placeholder="Nome do Médico">
+                    <input class="campo" type="text" placeholder="Especialidade do Médico">
+                    <input class="campo" type="text" placeholder="CRM">
+
+                    <label>Data da Receita</label>
+                    <input class="campo" type="date">
+
+                    <textarea placeholder="Observações"></textarea>
+
+                    <label>Validade da Receita</label>
+                    <input class="campo" type="date">
+
+                    <label class="toggle-card">
+                        <input type="checkbox" id="gerarControle">
+                        <span>Adicionar à rotina de remédios</span>
+                    </label>
+                </div>
+
+                <button class="btn-salvar">Salvar Receita</button>
+            </section>
+        </div>
+
+        <!-- LISTA -->
+        <section class="lista">
+            <h2>Minhas Receitas</h2>
+
+            <div class="filtro-receitas">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Buscar por médico, especialidade ou data">
+            </div>
+
+            <div class="receita-card">
+                <div class="preview">
+                    <i class="fa-solid fa-file-prescription"></i>
+                </div>
+
+                <div class="receita-info">
+                    <h3>Cardiologista</h3>
+                    <p>Dr. João Silva</p>
+                    <p>Receita salva em 31/03/2026</p>
+
+                    <p class="validade">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        Válida até: 30/04/2026
+                    </p>
+
+                    <div class="acoes-card">
+                        <button>
+                            <i class="fa-solid fa-eye"></i>
+                            Ver Receita
+                        </button>
+
+                        <button>
+                            <i class="fa-solid fa-pills"></i>
+                            Gerar Rotina
+                        </button>
+
+                        <button>
+                            <i class="fa-solid fa-share-nodes"></i>
+                            Compartilhar
+                        </button>
+
+                        <button>
+                            <i class="fa-solid fa-trash"></i>
+                            Excluir
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

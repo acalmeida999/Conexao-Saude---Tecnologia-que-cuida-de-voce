@@ -1,0 +1,84 @@
+body {
+    background: linear-gradient(135deg, #7DBFFC, #e3eefa, #7DBFFC);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* CARD PRINCIPAL */
+.welcome-card {
+    background: white;
+    max-width: 850px;
+    width: 100%;
+    padding: 60px 45px;
+    border-radius: 32px;
+    box-shadow: 0 10px 35px rgba(37, 99, 235, 0.08);
+    transition: 0.3s ease;
+}
+
+.welcome-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 40px rgba(37, 99, 235, 0.12);
+}
+
+/* LOGO RESPONSIVA */
+.logo-site {
+    width: clamp(220px, 45vw, 420px);
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* TÍTULO */
+h1 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: #305fc4;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* TEXTOS */
+p {
+    font-size: clamp(0.95rem, 2vw, 1.05rem);
+    color: black;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+small {
+    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+    line-height: 1.6;
+}
+
+/* BOTÃO PRINCIPAL */
+.btn-primary {
+    background: linear-gradient(90deg, #2563eb, #14b8a6);
+    border: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* BOTÃO SECUNDÁRIO */
+.btn-outline-secondary {
+    border: 1px solid #09284e;
+    color: #0966e9;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+   background: linear-gradient(90deg, #2563eb, #14b8a6);
+    transform: translateY(-1px);
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+    .welcome-card {
+        padding: 30px 20px;
+        border-radius: 24px;
+    }
+}

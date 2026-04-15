@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt-br">
+ 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conexão Saúde - Home</title>
+ 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/dicas_de_saude.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ 
+    <style>
+    body {
+            background: rgb(157, 204, 248);
+        }
+    .topo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+       }
+        .card{
+            margin: 20;
+            padding: 20px;
+            max-width: 1000px;
+            
+        }
+    </style>
+</head>
+ 
+<body>
+ 
+    <body class="d-flex">
+ 
+        <!-- MENU LATERAL -->
+        <header class="d-flex flex-column align-items-center m-3 rounded-5 pb-3">
+ 
+ 
+            <div class="d-flex flex-column align-items-center mb-4 mt-5">
+ 
+                <img class="foto_usuario rounded-circle" src="">
+ 
+                <span class="nome_usuario"></span>
+ 
+            </div>
+ 
+            <nav class="nav_header mt-4">
+ 
+                <ul class="menu_header d-flex flex-column gap-4 list-unstyled">
+ 
+                    <li>
+                        <a href="home.html" class="text-decoration-none text-dark">
+                            <i class="fa-solid fa-house me-2"></i> Início
+                        </a>
+                    </li>
+ 
+                    <li>
+                        <a href="perfil.html" class="text-decoration-none text-dark">
+                            <i class="fa-solid fa-user me-2"></i> Perfil
+                        </a>
+                    </li>
+ 
+                    <li>
+                        <a href="remedio.html" class="text-decoration-none text-dark">
+                            <i class="fa-solid fa-pills me-2"></i> Remédios
+                        </a>
+                    </li>
+ 
+                    <li>
+                        <a href="dicas_de_saude.html" class="text-decoration-none text-dark">
+                            <i class="fa-solid fa-hand-holding-heart me-2"></i> Dicas de Saúde
+                        </a>
+                    </li>
+ 
+                    <li>
+                        <a href="pontosColeta.html" class="text-decoration-none text-dark">
+                            <i class="fa-solid fa-map-location-dot me-2"></i> Pontos de Coleta
+                        </a>
+                    </li>
+ 
+                    <li>
+                        <a href="configuracao.html" class="text-decoration-none text-dark">
+                            <i class="fa-solid fa-gear me-2"></i> Configuração
+                        </a>
+                    </li>
+ 
+                    <li>
+                        <a href="login.html" class="text-decoration-none text-dark">
+                            <i class="fa-solid fa-right-from-bracket me-2"></i> Sair
+                        </a>
+                    </li>
+ 
+                </ul>
+ 
+            </nav>
+        </header>
+
+    <main class="conteudo flex-grow-1 p-3">
+
+         <div class="topo">
+                <h1>Seja Bem-vinda</h1>
+                 <div class="pesquisa-box">
+                    
+                     <form class="fx_pesquisa position-relative">
+                          <input type="search" class="form-control ps-5 rounded-5"  placeholder="Pesquisar...">
+                     </form>
+                </div>
+            </div>
+
+        <div class="card p-5 rounded-5">
+                <h2><i class="fa-solid fa-qrcode"></i>Pagamentos</h2>
+
+              <label>Escolha a forma de pagamento:</label>
+               <select id="metodo" onchange="mostrarMetodo()">
+                  <option value="cartao">Cartão de Crédito</option>
+                   <option value="cartao">Cartão de Débito</option>
+               </select>
+
+             <div id="card">
+                 <input type="text" placeholder="Nome no cartão">
+                 <input type="text" placeholder="Número do cartão">
+                 <input type="text" placeholder="Validade (MM/AA)">
+                 <input type="text" placeholder="CVV">
+                 <br>
+                 <button onclick="pagar()">Confirmar Pagamento</button>
+             </div>
+         </div> 
+
+          <script>
+              function mostrarMetodo() {
+              let metodo = document.getElementById("metodo").value;
+              document.getElementById("cartao").style.display = (metodo === "cartao") ? "block" : "none";
+            }
+
+           function pagar() {
+             alert("Pagamento processado");
+              }
+
+         </script>
+
+        <br>
+       <div class="card p-5 rounded-5">
+         <h2>Gerar QR Code</h2>
+         <p>E-mail conexaosaude@saude.com.br</p>
+         <p>CNPJ 00.123.456/0001-78</p>
+
+         <input type="text" id="texto" placeholder="Digite algo (link, PIX, etc)">
+         <button onclick="gerarQR()">Gerar</button>
+
+         <div id="qrcode" style="margin-top:20px;"></div>
+
+         <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+
+         <script>
+         function gerarQR() {
+         const texto = document.getElementById("texto").value;
+
+         document.getElementById("qrcode").innerHTML = "";
+
+         new QRCode(document.getElementById("qrcode"), {
+         text: texto,
+         width: 200,
+            height: 200
+         });
+         }
+         </script>
+
+
+         <br>
+         <br>
+          </div>
+             <button class="save"><i class="fa-solid fa-bookmark"></i>Salvar configurações</button>
+         </div>
+       </div>
+        </main>
+        <script src="./js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+ </main>
+    </body>
+ 
+</html>

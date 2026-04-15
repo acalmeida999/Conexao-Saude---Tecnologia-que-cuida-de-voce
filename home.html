@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Conexão Saúde - Home</title>
+    <link rel="shortcut icon" href="./img/favicon.jpg" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/home.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- MENU LATERAL -->
+    <header class="d-flex flex-column align-items-center m-3 rounded-5 pb-3">
+
+
+        <div class="d-flex flex-column align-items-center mb-4 mt-5">
+
+            <img class="foto_usuario rounded-circle" src="./img/icone_usuario2.png" alt="Foto de perfil do usuário">
+
+            <span class="nome_usuario">Ana Carolina</span>
+
+        </div>
+
+        <nav class="nav_header mt-4">
+
+            <ul class="menu_header d-flex flex-column gap-4 list-unstyled">
+
+                <li>
+                    <a href="home.html" class="text-decoration-none text-dark">
+                        <i class="fa-solid fa-house me-2"></i> Início
+                    </a>
+                </li>
+
+                <li>
+                    <a href="perfil.html" class="text-decoration-none text-dark">
+                        <i class="fa-solid fa-user me-2"></i> Perfil
+                    </a>
+                </li>
+
+                <li>
+                    <a href="remedio.html" class="text-decoration-none text-dark">
+                        <i class="fa-solid fa-pills me-2"></i> Remédios
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dicas_de_saude.html" class="text-decoration-none text-dark">
+                        <i class="fa-solid fa-hand-holding-heart me-2"></i> Dicas de Saúde
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pontosColeta.html" class="text-decoration-none text-dark">
+                        <i class="fa-solid fa-map-location-dot me-2"></i> Pontos de Coleta
+                    </a>
+                </li>
+
+                <li>
+                    <a href="configuracao.html" class="text-decoration-none text-dark">
+                        <i class="fa-solid fa-gear me-2"></i> Configuração
+                    </a>
+                </li>
+
+                <li>
+                    <a href="index.html" class="text-decoration-none text-dark">
+                        <i class="fa-solid fa-right-from-bracket me-2"></i> Sair
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="conteudo flex-grow-1 p-3">
+
+        <!-- SAUDAÇÃO + PESQUISA -->
+        <div class="topo_desktop rounded-5 px-4">
+
+            <div class="fx_saudacao">
+                <h2 class="m-0">Seja Bem-vinda</h2>
+            </div>
+
+            <form class="fx_pesquisa position-relative">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="search" placeholder="Pesquisar...">
+            </form>
+
+            <!--  SINO  -->
+            <div class="icone_notificacao">
+                <i class="fa-solid fa-bell"></i>
+            </div>
+
+        </div>
+
+        <!--  TOPO MOBILE -->
+        <div class="topo_mobile">
+
+            <!-- LINHA 1 -->
+            <div class="topo_linha1">
+
+                <div class="bloco_usuario">
+                    <img src="./img/icone_usuario2.png" class="foto_mobile" alt="Foto de perfil do usuário">
+
+                    <div class="info_usuario">
+                        <span class="ola_usuario">Olá ,</span>
+                        <span class="nome_usuario_mobile">Ana Carolina</span>
+
+                    </div>
+                </div>
+
+                <div class="icone_notificacao">
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+
+            </div>
+
+            <!-- LINHA 2 -->
+            <div class="topo_linha2">
+                <form class="fx_pesquisa position-relative">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="search" placeholder="Pesquisar..." aria-label="Pesquisar no site">
+                </form>
+            </div>
+
+        </div>
+
+        <!-- card registro diario -->
+        <div class="card_status rounded-5" data-bs-toggle="modal" data-bs-target="#registroModal">
+
+            <div class="d-flex align-items-center justify-content-between">
+
+                <div>
+                    <h5 class="titulo_status">Como você está hoje?</h5>
+                    <small class="sub_status">Clique para registrar sua avaliação</small>
+                </div>
+
+                <div class="icone_status">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ROTINA DE MEDICAMENTOS -->
+        <div class="rotina_medicamentos d-flex flex-column align-items-center rounded-5 mt-4 p-3">
+
+            <h2 class="mt-3"> Meus Medicamentos</h2>
+
+            <!-- AÇÕES -->
+            <div class="acoes_medicamento d-flex flex-wrap justify-content-center gap-4 mt-4">
+
+                <a href="formulario_remedio.html" class="card_acao text-decoration-none text-dark">
+                    <i class="fa-solid fa-pills"></i>
+                    <span>Adicionar Remédio</span>
+                </a>
+
+                <a href="receitas_medicas.html" class="card_acao text-decoration-none text-dark">
+                    <i class="fa-solid fa-file-medical"></i>
+                    <span>Adicionar Receitas</span>
+                </a>
+
+                <a href="#" class="card_acao text-decoration-none text-dark">
+                    <i class="fa-solid fa-camera"></i>
+                    <span>Caixa ou Receita</span>
+                </a>
+
+            </div>
+
+
+            <!-- LISTA DE MEDICAMENTOS -->
+            <div id="lista_medicamentos" class="d-flex flex-column rounded-5 m-4 gap-3">
+
+                <div class="card_medicamento card_ok p-4 rounded-5">
+
+                    <div class="d-flex flex-column gap-1">
+
+                        <!-- TOPO -->
+                        <div class="d-flex justify-content-between">
+
+                            <div class="d-flex align-items-center gap-3">
+
+                                <i class="fa-solid fa-pills text-primary fs-2"></i>
+
+                                <div>
+                                    <h4 class="m-0">Paracetamol</h4>
+                                    <small class="text-muted">
+                                        500mg • 1 comprimido
+                                    </small>
+                                </div>
+
+                            </div>
+
+                            <!-- BOTÕES -->
+                            <div class="d-flex gap-2">
+
+                                <button class="editar_medicamento btn btn-sm btn-outline-primary"
+                                    aria-label="Editar medicamento">
+                                    <i class="fa-solid fa-pen" aria-hidden="true"></i>
+                                </button>
+
+                                <button class="excluir_medicamento btn btn-sm btn-outline-danger"
+                                    aria-label="Excluir medicamento">
+                                    <i class="fa-solid fa-trash" aria-hidden="true"></i>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- DIAS -->
+                        <div class="mt-3">
+                            <i class="fa-solid fa-calendar-days text-secondary me-2"></i>
+                            Seg • Ter • Qua • Qui • Sex
+                        </div>
+
+                        <!-- HORÁRIOS -->
+                        <div class="mt-2">
+                            <i class="fa-solid fa-clock text-secondary me-2"></i>
+                            08:00 • 20:00
+                        </div>
+
+                        <!-- QUANTIDADE -->
+                        <div class="mt-2 quantidade_box">
+
+                            <i class="fa-solid fa-capsules text-secondary me-2"></i>
+
+                            <span class="qtd">18</span> comprimidos restantes
+
+                            <div class="progress">
+                                <div class="progress-bar"></div>
+                            </div>
+
+                        </div>
+
+                        <!-- DURAÇÃO -->
+                        <div class="mt-2">
+                            <i class="fa-solid fa-hourglass-half text-secondary me-2"></i>
+                            Tratamento por 15 dias
+                        </div>
+
+                        <!-- ALERTA -->
+                        <div class="mt-2 d-flex justify-content-between align-items-center alerta_container">
+
+                            <div class="alerta fw-semibold"></div>
+
+                            <button class="btn_repor">
+                                <i class="fa-solid fa-rotate"> Repor Remedios</i>
+                            </button>
+
+                        </div>
+
+                        <!-- INFO -->
+                        <div class="info_remedio mt-3">
+                            <i class="fa-solid fa-circle-info text-primary me-2"></i>
+                            <span title="Usado para aliviar dores leves, cólicas, dor de cabeça e reduzir febre">
+                                INFORMAÇÃO DO MEDICAMENTO
+                            </span>
+                        </div>
+
+                        <!-- BOTÃO -->
+                        <div class="mt-3 d-flex justify-content-center">
+
+                            <button class="btn btn_tomar">
+                                <i class="fa-solid fa-check me-1"></i>
+                                Tomei o remédio
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+        <!-- MENU MOBILE -->
+        <nav class="menu_mobile">
+
+            <a href="home.html" class="ativo">
+                <i class="fa-solid fa-house"></i>
+                <span>Início</span>
+            </a>
+
+            <a href="perfil.html">
+                <i class="fa-solid fa-user"></i>
+                <span>Perfil</span>
+            </a>
+
+            <a href="remedio.html">
+                <i class="fa-solid fa-pills"></i>
+                <span>Remédios</span>
+            </a>
+
+            <a href="dicas_de_saude.html">
+                <i class="fa-solid fa-heart"></i>
+                <span>Dicas</span>
+            </a>
+
+            <a href="pontosColeta.html">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Coleta</span>
+            </a>
+
+        </nav>
+    </main>
+
+
+
+
+    <div class="modal fade " id="registroModal" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <!-- HEADER -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Avaliação do Dia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- BODY -->
+                <div class="modal-body">
+
+                    <!-- SENTIMENTO -->
+                    <div class="card-custom">
+                        <strong>Como você está se sentindo?</strong>
+                        <div class="mt-3 d-flex gap-2 flex-wrap selectable" id="sentimentoBtns">
+                            <button class="btn-pill" data-value="bem">🙂 Bem</button>
+                            <button class="btn-pill" data-value="cansado">😞 Cansado</button>
+                            <button class="btn-pill" data-value="dor">😫 Com dor</button>
+                            <button class="btn-pill" data-value="enjoo">🤒 Doente</button>
+                        </div>
+                    </div>
+
+                    <!-- DOR -->
+                    <div class="card-custom mt-3 hidden" id="blocoDor">
+                        <strong>Qual a intensidade da dor?</strong>
+
+                        <div class="d-flex align-items-center gap-2 mt-3">
+                            <span>0</span>
+                            <input type="range" id="dorRange" class="form-range" min="0" max="10" value="0">
+                            <span>10</span>
+                        </div>
+
+                        <div class="text-center mt-2">
+                            <strong id="valorDor">0</strong>
+                            <div id="textoDor" class="texto-dor">Sem dor</div>
+                        </div>
+                    </div>
+
+                    <!-- MEDICAMENTO -->
+                    <div class="card-custom mt-3 hidden" id="medicamentoBox">
+
+                        <strong>Tomou medicamento?</strong>
+
+                        <div class="mt-3 d-flex gap-2 flex-wrap selectable" id="remedioBtns">
+                            <button class="btn-pill" data-value="sim">Sim</button>
+                            <button class="btn-pill" data-value="nao">Não</button>
+                        </div>
+
+                        <!-- FORM -->
+                        <div class="mt-3 hidden" id="formRemedio">
+
+                            <input type="text" class="form-control mb-2" placeholder="Nome do remédio">
+
+                            <input type="number" class="form-control mb-2" placeholder="Dose (mg)">
+
+                            <input type="time" class="form-control mb-2">
+
+                            <strong>Ajudou?</strong>
+                            <div class="mt-2 d-flex gap-2 flex-wrap selectable" id="ajudaBtns">
+                                <button class="btn-pill">👍 Ajudou</button>
+                                <button class="btn-pill">🙂 Parcial</button>
+                                <button class="btn-pill">👎 Não</button>
+                            </div>
+
+                            <strong class="mt-3">Precisou de outro?</strong>
+                            <div class="mt-2 d-flex gap-2 flex-wrap selectable" id="outroBtns">
+                                <button class="btn-pill" data-value="sim">Sim</button>
+                                <button class="btn-pill" data-value="nao">Não</button>
+                            </div>
+
+                            <div class="mt-3 hidden" id="segundoRemedio">
+                                <input type="text" class="form-control mb-2" placeholder="Segundo remédio">
+                                <input type="number" class="form-control mb-2" placeholder="Dose (mg)">
+                                <input type="time" class="form-control">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- SONO -->
+                    <div class="card-custom mt-3">
+                        <strong>Como dormiu?</strong>
+                        <div class="mt-3 d-flex gap-2 flex-wrap selectable" id="sonoBtns">
+                            <button class="btn-pill">😃 Bem</button>
+                            <button class="btn-pill">🙂 Médio</button>
+                            <button class="btn-pill">😫 Mal</button>
+                        </div>
+                    </div>
+
+                    <!-- ENERGIA -->
+                    <div class="card-custom mt-3">
+                        <strong>Energia</strong>
+                        <div class="mt-3 d-flex gap-2 flex-wrap selectable" id="energiaBtns">
+                            <button class="btn-pill energia-alta"> 😆Alta</button>
+                            <button class="btn-pill energia-media">😐 Média</button>
+                            <button class="btn-pill energia-baixa"> 🥱Baixa</button>
+                        </div>
+                    </div>
+
+                    <!-- OBSERVAÇÃO -->
+                    <div class="card-custom mt-3">
+                        <strong>Observação (opcional)</strong>
+                        <textarea class="form-control mt-2" rows="2"></textarea>
+                    </div>
+
+                </div>
+
+                <!-- FOOTER -->
+                <div class="modal-footer">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar Avaliação"></button>
+                    <button class="btn btn-primary" id="btnSalvar">Salvar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/script.js"></script>
+    <script src="./js/home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
