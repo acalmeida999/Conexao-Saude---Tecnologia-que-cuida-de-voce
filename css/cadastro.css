@@ -1,13 +1,119 @@
-@media (max-width: 576px) {
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= FUNDO ================= */
+body {
+  background: linear-gradient(135deg, #7DBFFC, #e3eefa, #7DBFFC);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* CENTRALIZA */
+  align-items: flex-start; /* mantém no topo */
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  width: 100%;
+  max-width: 900px;
+  padding: 20px;
+}
+
+/* ================= CARD ================= */
+.card {
+  border-radius: 30px;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+
+/* ================= TÍTULO ================= */
+h3 {
+  font-weight: 700;
+  color: #1e293b;
+  text-align: center;
+}
+
+h3 i {
+  color: #3b82f6;
+}
+
+/* ================= LABELS ================= */
+.form-label {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* ================= INPUTS ================= */
+.form-control,
+.form-select {
+  background: #f1f5f9;
+  border: 1.5px solid #93c5fd;
+  color: #0f172a;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+/* foco */
+.form-control:focus,
+.form-select:focus {
+  background: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+}
+
+/* placeholder */
+::placeholder {
+  color: #64748b;
+  opacity: 1;
+}
+
+/* ================= RADIO / CHECK ================= */
+.form-check-input {
+  border: 2px solid #3b82f6;
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+/* ================= DIVISÓRIA ================= */
+hr {
+  opacity: 0.2;
+}
+
+/* ================= BOTÕES ================= */
+.btn-primary {
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 10px;
+  background: #2563eb;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+/* ================= AJUSTES BOOTSTRAP ================= */
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
   .card {
-    padding: 20px 15px;
-  }
-
-  h3 {
-    font-size: 1.4rem;
-  }
-
-  h5 {
-    font-size: 1rem;
+    padding: 20px !important;
+    border-radius: 25px;
   }
 }

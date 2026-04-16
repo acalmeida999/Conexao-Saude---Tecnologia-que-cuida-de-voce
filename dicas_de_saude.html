@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conexão Saúde - Dicas</title>
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/dicas_de_saude.css">
-
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -18,7 +18,9 @@
 
         <!-- topo -->
         <div class="topo_pagina text-center">
-            <a href="home.html" class="btn_voltar text-decoration-none ">←</a>
+            <a href="home.html" class="btn_voltar" aria-label="Voltar para página anterior">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
             <h1>Dicas de Saúde e Prevenção</h1>
         </div>
 
@@ -31,32 +33,48 @@
             </div>
 
             <!-- carrossel -->
-            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
+            <div id="carouselExampleInterval" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                data-bs-interval="5000" aria-label="Campanha do mês sobre conscientização do autismo">
+
+                <!-- indicadores -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active"
+                        aria-label="Banner 1"></button>
+
+                    <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1"
+                        aria-label="Banner 2"></button>
+
+                    <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2"
+                        aria-label="Banner 3"></button>
+                </div>
+
+                <div class="carousel-inner rounded-4">
 
                     <div class="carousel-item active">
-                        <img src="./img/banner_autismo_1.png" alt="Banner autismo">
+                        <img src="./img/banner_autismo_1.webp" alt="Campanha sobre sinais do TEA" width="1000"
+                            height="500">
                     </div>
 
                     <div class="carousel-item">
-                        <img src="./img/banner_autismo_2.png" alt="Sinais do TEA">
+                        <img src="./img/banner_autismo_2.webp" alt="Diversidade no espectro autista" width="1000"
+                            height="500" loading="lazy">
                     </div>
 
                     <div class="carousel-item">
-                        <img src="./img/banner_autismo_3.png" alt="Diversidade no espectro">
+                        <img src="./img/banner_autismo_3.webp" alt="Inclusão e conscientização" width="1000"
+                            height="500" loading="lazy">
                     </div>
-
                 </div>
 
                 <!-- botões -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
+                    data-bs-slide="prev" aria-label="Imagem anterior">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 </button>
 
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
+                    data-bs-slide="next" aria-label="Próxima imagem">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 </button>
             </div>
         </section>

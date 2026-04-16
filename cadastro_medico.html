@@ -11,9 +11,10 @@
 </head>
 
 <body>
+    <main class="container py-4">
 
-    <div class="container py-4">
         <div class="card p-4 rounded-5 shadow">
+
             <h2 class="text-center mb-4 fw-bold">
                 <i class="fa-solid fa-file-medical text-primary me-2"></i>
                 Cadastro Médico
@@ -23,17 +24,19 @@
 
                 <!-- TIPO SANGUÍNEO -->
                 <section class="mb-4">
-                    <h5>Tipo Sanguíneo</h5>
+                    <h3>Tipo Sanguíneo</h3>
+
                     <div class="blood-grid">
-                        <button type="button" class="blood-btn">O+</button>
-                        <button type="button" class="blood-btn">O-</button>
-                        <button type="button" class="blood-btn">A+</button>
-                        <button type="button" class="blood-btn">A-</button>
-                        <button type="button" class="blood-btn">B+</button>
-                        <button type="button" class="blood-btn">B-</button>
-                        <button type="button" class="blood-btn">AB+</button>
-                        <button type="button" class="blood-btn">AB-</button>
+                        <button type="button" class="blood-btn" aria-label="Tipo sanguíneo O positivo">O+</button>
+                        <button type="button" class="blood-btn" aria-label="Tipo sanguíneo O negativo">O-</button>
+                        <button type="button" class="blood-btn" aria-label="Tipo sanguíneo A positivo">A+</button>
+                        <button type="button" class="blood-btn" aria-label="Tipo sanguíneo A negativo">A-</button>
+                        <button type="button" class="blood-btn" aria-label="Tipo sanguíneo B positivo">B+</button>
+                        <button type="button" class="blood-btn" aria-label="Tipo sanguíneo B negativo">B-</button>
+                        <button type="button" class="blood-btn" aria-label="Tipo sanguíneo AB positivo">AB+</button>
+                        <button type="button" class="blood-btn" aria-label="Tipo sanguíneo AB negativo">AB-</button>
                     </div>
+
                     <input type="hidden" id="tipoSanguineo">
                 </section>
 
@@ -41,12 +44,16 @@
 
                 <!-- ALTURA E PESO -->
                 <section class="mb-4">
-                    <h5>Altura e Peso</h5>
+                    <h3>Altura e Peso</h3>
+
                     <div class="row g-3">
                         <div class="col-md-6">
+                            <label for="altura" class="form-label">Altura</label>
                             <input id="altura" class="form-control" placeholder="Altura em metros (Ex: 1.50)">
                         </div>
+
                         <div class="col-md-6">
+                            <label for="peso" class="form-label">Peso</label>
                             <input id="peso" class="form-control" placeholder="Peso em kg (Ex: 60)">
                         </div>
                     </div>
@@ -56,197 +63,115 @@
 
                 <!-- ALERGIAS -->
                 <section class="mb-4">
-                    <h5>Alergias</h5>
+                    <h3>Alergias</h3>
 
-                    <h6>Alimentar</h6>
+                    <h4>Alimentar</h4>
                     <div class="chips-box" id="alergiaAlimentarBox">
-                        <span class="chip">Lactose</span>
-                        <span class="chip">Glúten</span>
-                        <span class="chip">Amendoim</span>
-                        <span class="chip">Camarão</span>
-                        <span class="chip">Ovo</span>
-                        <span class="chip">Soja</span>
+                        <button type="button" class="chip">Lactose</button>
+                        <button type="button" class="chip">Glúten</button>
+                        <button type="button" class="chip">Amendoim</button>
+                        <button type="button" class="chip">Camarão</button>
+                        <button type="button" class="chip">Ovo</button>
+                        <button type="button" class="chip">Soja</button>
                     </div>
+
                     <div class="input-add-group">
+                        <label for="novaAlergiaAlimentar" class="visually-hidden">Adicionar alergia alimentar</label>
                         <input id="novaAlergiaAlimentar" class="form-control" placeholder="Adicionar outra">
                         <button type="button" class="btn btn-outline-primary add-chip-btn"
-                            data-input="novaAlergiaAlimentar" data-target="alergiaAlimentarBox">Adicionar</button>
+                            aria-label="Adicionar alergia alimentar">
+                            Adicionar
+                        </button>
                     </div>
 
-                    <h6 class="mt-4">Medicamentos</h6>
+                    <h4 class="mt-4">Medicamentos</h4>
                     <div class="chips-box" id="alergiaMedicamentosBox">
-                        <span class="chip">Dipirona</span>
-                        <span class="chip">Penicilina</span>
-                        <span class="chip">Ibuprofeno</span>
-                        <span class="chip">Amoxicilina</span>
-                        <span class="chip">AAS</span>
-                        <span class="chip">Nimesulida</span>
+                        <button type="button" class="chip">Dipirona</button>
+                        <button type="button" class="chip">Penicilina</button>
+                        <button type="button" class="chip">Ibuprofeno</button>
+                        <button type="button" class="chip">Amoxicilina</button>
+                        <button type="button" class="chip">AAS</button>
+                        <button type="button" class="chip">Nimesulida</button>
                     </div>
+
                     <div class="input-add-group">
+                        <label for="novaAlergiaMedicamento" class="visually-hidden">Adicionar alergia
+                            medicamento</label>
                         <input id="novaAlergiaMedicamento" class="form-control" placeholder="Adicionar outra">
                         <button type="button" class="btn btn-outline-primary add-chip-btn"
-                            data-input="novaAlergiaMedicamento" data-target="alergiaMedicamentosBox">Adicionar</button>
+                            aria-label="Adicionar alergia medicamento">
+                            Adicionar
+                        </button>
                     </div>
 
-                    <h6 class="mt-4">Animais / Outros</h6>
+                    <h4 class="mt-4">Animais / Outros</h4>
                     <div class="chips-box" id="alergiaOutrosBox">
-                        <span class="chip">Pelos de gato</span>
-                        <span class="chip">Pelos de cachorro</span>
-                        <span class="chip">Ácaro</span>
-                        <span class="chip">Poeira</span>
-                        <span class="chip">Mofo</span>
-                        <span class="chip">Perfume</span>
+                        <button type="button" class="chip">Pelos de gato</button>
+                        <button type="button" class="chip">Pelos de cachorro</button>
+                        <button type="button" class="chip">Ácaro</button>
+                        <button type="button" class="chip">Poeira</button>
+                        <button type="button" class="chip">Mofo</button>
+                        <button type="button" class="chip">Perfume</button>
                     </div>
+
                     <div class="input-add-group">
+                        <label for="novaAlergiaOutros" class="visually-hidden">Adicionar alergia outros</label>
                         <input id="novaAlergiaOutros" class="form-control" placeholder="Adicionar outra">
                         <button type="button" class="btn btn-outline-primary add-chip-btn"
-                            data-input="novaAlergiaOutros" data-target="alergiaOutrosBox">Adicionar</button>
+                            aria-label="Adicionar alergia outros">
+                            Adicionar
+                        </button>
                     </div>
                 </section>
 
                 <hr>
 
-                <!-- RESTRIÇÕES -->
+                <!-- CONTATO -->
                 <section class="mb-4">
-                    <h5>Restrições</h5>
-
-                    <h6>Alimentar</h6>
-                    <div class="chips-box" id="restricaoAlimentarBox">
-                        <span class="chip">Sem lactose</span>
-                        <span class="chip">Sem glúten</span>
-                        <span class="chip">Pouco açúcar</span>
-                        <span class="chip">Pouco sal</span>
-                        <span class="chip">Low carb</span>
-                        <span class="chip">Vegetariano</span>
-                    </div>
-                    <div class="input-add-group">
-                        <input id="novaRestricaoAlimentar" class="form-control" placeholder="Adicionar outra">
-                        <button type="button" class="btn btn-outline-primary add-chip-btn"
-                            data-input="novaRestricaoAlimentar" data-target="restricaoAlimentarBox">Adicionar</button>
-                    </div>
-
-                    <h6 class="mt-4">Médicas</h6>
-                    <div class="chips-box" id="restricaoMedicaBox">
-                        <span class="chip">Evitar esforço</span>
-                        <span class="chip">Restrição cardíaca</span>
-                        <span class="chip">Mobilidade reduzida</span>
-                        <span class="chip">Repouso</span>
-                        <span class="chip">Evitar sol</span>
-                        <span class="chip">Sem impacto</span>
-                    </div>
-                    <div class="input-add-group">
-                        <input id="novaRestricaoMedica" class="form-control" placeholder="Adicionar outra">
-                        <button type="button" class="btn btn-outline-primary add-chip-btn"
-                            data-input="novaRestricaoMedica" data-target="restricaoMedicaBox">Adicionar</button>
-                    </div>
-                </section>
-
-                <hr>
-
-                <!-- CONDIÇÕES -->
-                <section class="mb-4">
-                    <h5>Condições Médicas</h5>
-
-                    <h6>Crônicas</h6>
-                    <div class="chips-box" id="condicoesCronicasBox">
-                        <span class="chip">Diabetes</span>
-                        <span class="chip">Hipertensão</span>
-                        <span class="chip">Asma</span>
-                        <span class="chip">Colesterol alto</span>
-                        <span class="chip">Obesidade</span>
-                        <span class="chip">Hipotireoidismo</span>
-                    </div>
-                    <div class="input-add-group">
-                        <input id="novaCondicaoCronica" class="form-control" placeholder="Adicionar outra">
-                        <button type="button" class="btn btn-outline-primary add-chip-btn"
-                            data-input="novaCondicaoCronica" data-target="condicoesCronicasBox">Adicionar</button>
-                    </div>
-
-                    <h6 class="mt-4">Saúde Mental</h6>
-                    <div class="chips-box" id="condicoesMentalBox">
-                        <span class="chip">Ansiedade</span>
-                        <span class="chip">Depressão</span>
-                        <span class="chip">TDAH</span>
-                        <span class="chip">Insônia</span>
-                        <span class="chip">Pânico</span>
-                        <span class="chip">Burnout</span>
-                    </div>
-                    <div class="input-add-group">
-                        <input id="novaCondicaoMental" class="form-control" placeholder="Adicionar outra">
-                        <button type="button" class="btn btn-outline-primary add-chip-btn"
-                            data-input="novaCondicaoMental" data-target="condicoesMentalBox">Adicionar</button>
-                    </div>
-
-                    <h6 class="mt-4">Outras</h6>
-                    <div class="chips-box" id="condicoesOutrasBox">
-                        <span class="chip">Gastrite</span>
-                        <span class="chip">Enxaqueca</span>
-                        <span class="chip">Artrite</span>
-                        <span class="chip">SOP</span>
-                        <span class="chip">Endometriose</span>
-                        <span class="chip">Hérnia</span>
-                    </div>
-                    <div class="input-add-group">
-                        <input id="novaCondicaoOutras" class="form-control" placeholder="Adicionar outra">
-                        <button type="button" class="btn btn-outline-primary add-chip-btn"
-                            data-input="novaCondicaoOutras" data-target="condicoesOutrasBox">Adicionar</button>
-                    </div>
-                </section>
-
-
-                <hr>
-
-                <section class="mb-4">
-                    <h5>
+                    <h3>
                         <i class="fa-solid fa-phone-volume text-primary me-2"></i>
                         Contato de Emergência
-                    </h5>
-
-                    <p class="text-muted small mb-3">
-                        Adicione até 3 pessoas para contato em situações importantes.
-                    </p>
+                    </h3>
 
                     <div id="contatosContainer">
                         <div class="contato-card">
-                            <button type="button" class="remove-contact-btn">
+
+                            <button type="button" class="remove-contact-btn" aria-label="Remover contato">
                                 <i class="fa-solid fa-xmark"></i>
                             </button>
 
                             <div class="row g-3">
                                 <div class="col-md-4">
-                                    <input class="form-control nomeContato" placeholder="Nome">
+                                    <label class="form-label">Nome</label>
+                                    <input class="form-control nomeContato">
                                 </div>
 
                                 <div class="col-md-4">
-                                    <input class="form-control telefoneContato" placeholder="Telefone">
+                                    <label class="form-label">Telefone</label>
+                                    <input class="form-control telefoneContato">
                                 </div>
 
                                 <div class="col-md-4">
+                                    <label class="form-label">Parentesco</label>
                                     <select class="form-control parentescoContato">
                                         <option>Pai</option>
                                         <option>Mãe</option>
                                         <option>Esposa</option>
                                         <option>Marido</option>
-                                        <option>Namorado(a)</option>
                                         <option>Amigo(a)</option>
-                                        <option>Tio(a)</option>
-                                        <option>Primo(a)</option>
                                     </select>
                                 </div>
                             </div>
+
                         </div>
                     </div>
 
-                    <button type="button" id="addContatoBtn" class="btn btn-outline-primary mt-2 rounded-4">
+                    <button type="button" id="addContatoBtn" class="btn btn-outline-primary mt-2 rounded-4"
+                        aria-label="Adicionar contato">
                         <i class="fa-solid fa-plus me-2"></i>
                         Adicionar contato
                     </button>
                 </section>
-
-                <p class="text-muted small text-center mt-3">
-                    Você pode preencher ou editar essas informações depois em
-                    <strong>Perfil > Informações Médicas</strong>.
-                </p>
 
                 <div class="d-grid gap-3 mt-4">
                     <button class="btn btn-primary rounded-5" type="submit">
@@ -257,9 +182,11 @@
                         Pular por enquanto
                     </a>
                 </div>
+
             </form>
         </div>
-    </div>
+
+    </main>
 
     <script src="./js/cadastro_medico.js"></script>
 </body>

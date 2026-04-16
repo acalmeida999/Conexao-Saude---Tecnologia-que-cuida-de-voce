@@ -32,26 +32,6 @@ body {
   color: #111827;
 }
 
-.btn_voltar {
-  border: none;
-  background: white;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  font-size: 22px;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #111827;
-  transition: 0.3s;
-}
-
-.btn_voltar:hover {
-  transform: scale(1.05);
-}
-
 /* card campanha */
 .banner_mes {
   background: white;

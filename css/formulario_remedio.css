@@ -1,26 +1,34 @@
-/* ================= CONTAINER ================= */
-body {
-  background: linear-gradient(135deg, #7DBFFC, #e3eefa, #7DBFFC);
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* CENTRALIZA */
+/* ================= FUNDO ================= */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #7DBFFC, #e3eefa, #7DBFFC);
+  min-height: 100vh;
+}
+
+/* ================= CONTAINER ================= */
 #lista_medicamentos {
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: 30px 15px;
 }
 
-
-/* ================= CARD FORM ================= */
+/* ================= CARD ================= */
 #lista_medicamentos .card {
   width: 100%;
-  max-width: 600px;
-  border-radius: 25px;
+  max-width: 650px;
+  border-radius: 28px;
   border: none;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 28px;
 }
-
 
 /* ================= TÍTULO ================= */
 .card h3 {
@@ -32,73 +40,120 @@ body {
   color: #337dff;
 }
 
+/* ================= LABEL ================= */
+.form-label {
+  font-weight: 600;
+  color: #1f2d3d;
+}
 
 /* ================= INPUTS ================= */
 .form-control,
 .form-select {
-  border-radius: 12px;
-  padding: 10px;
+  border-radius: 14px;
+  padding: 12px;
+  border: 1.5px solid #7aa7d9;
+  background-color: #ffffff;
+  color: #1f2d3d;
+  font-weight: 500;
 }
 
+/* placeholder */
+.form-control::placeholder {
+  color: #5f6b7a;
+  opacity: 1;
+}
+
+/* foco acessível */
+.form-control:focus,
+.form-select:focus {
+  border-color: #2563eb;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+  outline: none;
+}
 
 /* ================= CHECKBOX / RADIO ================= */
 .form-check-input {
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid #4a6fa5;
   cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: #2563eb;
+  border-color: #2563eb;
 }
 
 .form-check-label {
   cursor: pointer;
+  color: #1f2d3d;
+  font-weight: 500;
 }
 
-
-/* ================= BOTÃO ADD HORÁRIO ================= */
-#btnAddHorario {
-  border-radius: 20px;
+/* ================= HORÁRIOS ================= */
+#listaHorarios {
+  width: 100%;
+  max-width: 250px;
 }
 
-
-/* ================= HORÁRIO ITEM ================= */
 .horario_item {
+  display: flex;
+  gap: 8px;
   align-items: center;
 }
 
 .btnRemoverHorario {
   border-radius: 50% !important;
-  width: 35px;
-  height: 35px;
+  width: 36px;
+  height: 36px;
   padding: 0;
 }
 
+/* ================= BOTÃO ADD ================= */
+#btnAddHorario {
+  border-radius: 20px;
+}
 
-/* ================= ALERT INFO ================= */
+/* ================= ALERT ================= */
 .alert-info {
   border-radius: 15px;
   background-color: #e3f2fd;
   border: none;
 }
 
-
-/* ================= BOTÕES FINAL ================= */
+/* ================= BOTÕES ================= */
 .btn-success {
   border-radius: 25px;
-  padding: 10px 20px;
+  padding: 10px 22px;
 }
 
 .btn-secondary {
   border-radius: 25px;
 }
 
+/* ================= INPUT PEQUENO ================= */
+#quantidadeRemedio {
+  width: 120px !important;
+}
 
 /* ================= RESPONSIVO ================= */
 @media (max-width: 768px) {
 
-  #lista_medicamentos .card {
-    max-width: 95%;
-    padding: 20px;
+  #lista_medicamentos {
+    padding: 20px 10px;
   }
 
-  .w-25 {
+  #lista_medicamentos .card {
+    max-width: 100%;
+    padding: 22px;
+  }
+
+  #quantidadeRemedio {
     width: 100% !important;
   }
 
+  #listaHorarios {
+    max-width: 100%;
+  }
 }
