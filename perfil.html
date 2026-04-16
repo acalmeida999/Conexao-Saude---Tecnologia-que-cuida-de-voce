@@ -23,7 +23,7 @@
 
         <div class="d-flex flex-column align-items-center mb-4 mt-5">
 
-            <img class="foto_usuario rounded-circle" src="./img/icone_usuario2.png">
+            <img class="foto_usuario rounded-circle" src="./img/icone_usuario2.png" alt="Foto do usuário">
 
             <span class="nome_usuario">Ana Carolina</span>
 
@@ -90,15 +90,21 @@
 
                 <!-- BOTÃO ESCOLHER FOTO -->
                 <label class="mx-5" style="cursor: pointer;">
-                    <img class="foto_usuario" src="./img/icone_usuario2.png">
+                    <img class="foto_usuario rounded-circle" src="./img/icone_usuario2.png" alt="Foto do usuário">
                     <input type="file" id="input_foto" accept="image/*" hidden>
                 </label>
             </div>
 
-            <div class="info_usuario ">
-                <h4 class="nome">Ana Carolina</h4>
-                <p class="idade"><i class="fa-solid fa-cake-candles"></i> 33 anos</p>
-                <p class="cidade"><i class="fa-solid fa-location-dot"></i> São josé dos Campos</p>
+            <div class="info_usuario">
+                <h4 class="nome" id="nomeUsuario">Ana Carolina</h4>
+
+                <p class="idade" id="idadeUsuario">
+                    <i class="fa-solid fa-cake-candles"></i> 33 anos
+                </p>
+
+                <p class="cidade" id="cidadeUsuario">
+                    <i class="fa-solid fa-location-dot"></i> São José dos Campos
+                </p>
 
                 <button class="editar_perfil btn rounded-5">
                     <i class="fa-solid fa-pen me-2"></i>
@@ -158,28 +164,28 @@
                     <div class="col-md-6">
                         <div class="info-box">
                             <small>Nome</small>
-                            <p>Ana Carolina</p>
+                            <p id="nomePerfil">Ana Carolina</p>
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="info-box">
                             <small>Telefone</small>
-                            <p>(12) 99999-9999</p>
+                            <p id="telefonePerfil"> (12) 9 9999-9999</p>
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="info-box">
                             <small>Data de nascimento</small>
-                            <p>10/12/1992</p>
+                           <p id="nascimentoPerfil"> 10/12/1992</p>
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="info-box">
                             <small>Genero</small>
-                            <p>Feminino</p>
+                           <p id="generoPerfil">Feminino</p>
                         </div>
                     </div>
 
@@ -197,28 +203,28 @@
                     <div class="col-md-8">
                         <div class="info-box">
                             <small>Rua</small>
-                            <p>Rua Lineu de Moura</p>
+                          <p id="ruaPerfil"> Rua Lineu de Moura</p>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="info-box">
                             <small>Número</small>
-                            <p>205</p>
+                           <p id="numeroPerfil"> 205</p>
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="info-box">
                             <small>Cidade</small>
-                            <p>São José dos Campos </p>
+                           <p id="cidadePerfil"> São José dos Campos </p>
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="info-box">
                             <small>Estado</small>
-                            <p>SP</p>
+                            <p id="estadoPerfil"> São Paulo </p>
                         </div>
                     </div>
 
@@ -236,21 +242,21 @@
                     <div class="col-md-4">
                         <div class="info-box">
                             <small>Nome</small>
-                            <p>Luciana Almeida</p>
+                           <p id="contatoEmergenciaPerfil"> Luciana Almeida</p>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="info-box">
                             <small>Telefone</small>
-                            <p>(12) 98888-8888</p>
+                            <p id="telefoneEmergenciaPerfil"> (12) 98888-8888</p>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="info-box">
                             <small>Parentesco</small>
-                            <p>Mãe</p>
+                            <p id="parentescoPerfil"> Mãe</p>
                         </div>
                     </div>
 
@@ -279,28 +285,28 @@
                     <div class="col-md-3">
                         <div class="info-box text-center">
                             <small>Altura</small>
-                            <p>1,50 m</p>
+                            <p id="alturaPerfil"> 1,50 m</p>
                         </div>
                     </div>
 
                     <div class="col-md-3">
                         <div class="info-box text-center">
                             <small>Peso</small>
-                            <p>60 kg</p>
+                            <p id="pesoPerfil"> 60 kg</p>
                         </div>
                     </div>
 
                     <div class="col-md-3">
                         <div class="info-box text-center">
                             <small>IMC</small>
-                            <p>48.8</p>
+                            <p id="imcPerfil"> 48.8</p>
                         </div>
                     </div>
 
                     <div class="col-md-3">
                         <div class="info-box text-center">
                             <small>Tipo Sanguíneo</small>
-                            <p>O+</p>
+                            <p id="sanguePerfil"> O+</p>
                         </div>
                     </div>
 
@@ -317,7 +323,7 @@
                     <div class="col-md-4">
                         <div class="info-box">
                             <small>Alimentar</small>
-                            <p>Amendoim</p>
+                            <p id="alergiaAlimentarPerfil"> Amendoim</p>
                         </div>
                     </div>
 
