@@ -178,14 +178,14 @@
                     <div class="col-md-6">
                         <div class="info-box">
                             <small>Data de nascimento</small>
-                           <p id="nascimentoPerfil"> 10/12/1992</p>
+                            <p id="nascimentoPerfil"> 10/12/1992</p>
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="info-box">
                             <small>Genero</small>
-                           <p id="generoPerfil">Feminino</p>
+                            <p id="generoPerfil">Feminino</p>
                         </div>
                     </div>
 
@@ -203,21 +203,21 @@
                     <div class="col-md-8">
                         <div class="info-box">
                             <small>Rua</small>
-                          <p id="ruaPerfil"> Rua Lineu de Moura</p>
+                            <p id="ruaPerfil"> Rua Lineu de Moura</p>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="info-box">
                             <small>Número</small>
-                           <p id="numeroPerfil"> 205</p>
+                            <p id="numeroPerfil"> 205</p>
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="info-box">
                             <small>Cidade</small>
-                           <p id="cidadePerfil"> São José dos Campos </p>
+                            <p id="cidadePerfil"> São José dos Campos </p>
                         </div>
                     </div>
 
@@ -242,7 +242,7 @@
                     <div class="col-md-4">
                         <div class="info-box">
                             <small>Nome</small>
-                           <p id="contatoEmergenciaPerfil"> Luciana Almeida</p>
+                            <p id="contatoEmergenciaPerfil"> Luciana Almeida</p>
                         </div>
                     </div>
 
@@ -323,26 +323,33 @@
                     <div class="col-md-4">
                         <div class="info-box">
                             <small>Alimentar</small>
-                            <p id="alergiaAlimentarPerfil"> Amendoim</p>
+                            <div id="alergiaAlimentarPerfil">
+                                <p>--</p>
+                            </div>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="info-box">
                             <small>Medicamentos</small>
-                            <p>Penicilina</p>
+                            <div id="alergiaMedicamentoPerfil">
+                                <p>--</p>
+                            </div>
                         </div>
                     </div>
 
                     <div class="col-md-4">
                         <div class="info-box">
                             <small>Animais / Outros</small>
-                            <p>Pelos de gato</p>
+                            <div id="alergiaOutrosPerfil">
+                                <p>--</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <hr>
+
 
                 <!-- ================= RESTRIÇÕES ================= -->
                 <h5 class="text-black mb-3">
@@ -353,14 +360,14 @@
                     <div class="col-md-6">
                         <div class="info-box">
                             <small>Alimentar</small>
-                            <p>Baixo consumo de açúcar</p>
+                            <p id="restricaoAlimentarPerfil">--</p>
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="info-box">
                             <small>Médicas</small>
-                            <p>Evitar esforço intenso</p>
+                            <p id="restricaoMedicaPerfil">--</p>
                         </div>
                     </div>
                 </div>
@@ -372,9 +379,13 @@
                     <i class="fa-solid fa-heart-circle-exclamation"></i> Condições Médicas
                 </h5>
 
-                <div class="info-box">
-                    <p>Hipertensão • Diabetes • Asma</p>
+                <div class="info-box" id="condicoesPerfil">
+                    <p>--</p>
                 </div>
+
+                <hr>
+
+
 
                 <hr>
 
@@ -383,10 +394,8 @@
                     <i class="fa-solid fa-pills"></i> Medicações
                 </h5>
 
-                <div class="info-box">
-                    <p>Losartana 50mg - 1x ao dia</p>
-                    <p>Metformina 500mg - 2x ao dia</p>
-                    <p>Aerolin - Quando necessário</p>
+                <div class="info-box" id="medicacoesPerfil">
+                    <p>--</p>
                 </div>
 
                 <hr>
@@ -403,6 +412,7 @@
                             <div class="info-box text-center card-documento">
                                 <i class="fa-solid fa-file-prescription fa-2x mb-2 text-primary"></i>
                                 <p>Receitas Médicas</p>
+                                <small id="qtdReceitas">0 arquivos</small>
                             </div>
                         </a>
                     </div>
@@ -412,6 +422,7 @@
                             <div class="info-box text-center card-documento">
                                 <i class="fa-solid fa-file-waveform fa-2x mb-2 text-success"></i>
                                 <p>Exames</p>
+                                <small id="qtdExames">0 arquivos</small>
                             </div>
                         </a>
                     </div>
@@ -421,6 +432,7 @@
                             <div class="info-box text-center card-documento">
                                 <i class="fa-solid fa-file-circle-check fa-2x mb-2 text-warning"></i>
                                 <p>Atestados</p>
+                                <small id="qtdAtestados">0 arquivos</small>
                             </div>
                         </a>
                     </div>
@@ -429,7 +441,8 @@
                         <a href="cartao_sus.html" class="card_acao text-decoration-none text-dark">
                             <div class="info-box text-center card-documento">
                                 <img src="./img/cartao_cns.png" alt="Cartão SUS" class="img-cartao-cns">
-                                <p> CNS</p>
+                                <p>CNS</p>
+                                
                             </div>
                         </a>
                     </div>
